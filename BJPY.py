@@ -39,3 +39,10 @@ class Hand:
 
 	def adjust_for_ace(self):
 		pass
+
+class Chips:
+	def __init__(self):
+		self.total = 100
+		self.bet = 0
+
+
