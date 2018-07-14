@@ -12,3 +12,30 @@ class Card:
 		self.rank = rank
 	def __str__(self):
 		return self.rank + ' of ' + self.suit
+
+class Deck:
+
+	def __init__(self):
+		self.deck = []
+		for suit in suits:
+			for rank in ranks:
+				self.deck.append(Card(suit, rank))
+    def __str__(self):
+    	return len(self.deck)
+
+    def shuffle(self):
+    	random.shuffle(self.deck)
+
+    def deal(self):
+    	pass
+
+class Hand:
+	def __init__(self):
+		self.cards = []
+		self.value = 0
+		self.aces = 0
+	def add_card(self, card):
+		self.cards.append(card)
+
+	def adjust_for_ace(self):
+		pass
